@@ -21,9 +21,14 @@ def welcome(update, context) -> None:
                               f"Feel free to explore our vast collection and have a fantastic cinematic experience!\n"
                               f"If you have any questions or need assistance, don't hesitate to reach out. Enjoy your time at AA Cinemas! 🎬")
 
-    update.message.reply_text("👇 Enter Movie Name 👇")
+    update.message.reply_text("😎 Enter Movie Name here 👇")
 
+def search(update, context) -> None:
+    
+    update.message.reply_text("You can Now Search For any Movie to be Booked")
+    
 
+    
 def find_movie(update, context):
     search_results = update.message.reply_text("Got it ! 🤩 \nProcessing 🚀🚀🚀...")
     query = update.message.text
@@ -35,6 +40,8 @@ def find_movie(update, context):
             keyboards.append([keyboard])
         reply_markup = InlineKeyboardMarkup(keyboards)
         search_results.edit_text('Search Results...', reply_markup=reply_markup)
+    elif '/' in query:
+        search_results.edit_text("Command not activated yet")
     else:
         search_results.edit_text('Sorry 🙏, No Result Found!\nCheck If You Have Misspelled The Movie Name.')
 
