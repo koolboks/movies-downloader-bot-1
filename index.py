@@ -14,9 +14,17 @@ bot = Bot(TOKEN)
 
 
 def welcome(update, context) -> None:
-    update.message.reply_text(f"Hello {update.message.from_user.first_name}, Welcome to SB Movies.\n"
-                              f"🔥 Download Your Favourite Movies For 💯 Free And 🍿 Enjoy it.")
-    update.message.reply_text("👇 Enter Movie Name 👇")
+    update.message.reply_text(f"""Hey {update.message.from_user.first_name}😎,
+
+Welcome to AA Cinemas! 🔥
+
+Here, you can search and book your favorite movies for free and get ready to enjoy them with a bucket of popcorn 🍿.
+
+To get started, simply enter the name of the movie you're interested in and we'll take care of the rest. 👇
+
+Feel free to explore our vast collection and have a fantastic cinematic experience!
+
+If you have any questions or need assistance, don't hesitate to reach out. Enjoy your time at AA Cinemas! 🎬"""
 
 
 def find_movie(update, context):
