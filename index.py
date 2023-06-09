@@ -25,7 +25,7 @@ def welcome(update, context) -> None:
 
 
 def find_movie(update, context):
-    search_results = update.message.reply_text("Processing...")
+    search_results = update.message.reply_text("Got it ! 🤩 \nProcessing 🚀🚀🚀...")
     query = update.message.text
     movies_list = search_movies(query)
     if movies_list:
