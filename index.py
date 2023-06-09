@@ -14,17 +14,14 @@ bot = Bot(TOKEN)
 
 
 def welcome(update, context) -> None:
-    update.message.reply_text(f"""Hey {update.message.from_user.first_name}😎,
+    update.message.reply_text(f"Hey {update.message.from_user.first_name}😎,\n"
+                              f"Welcome to AA Cinemas! 🔥\n"
+                              f"Here, you can search and book your favorite movies for free and get ready to enjoy them with a bucket of popcorn 🍿.\n"
+                              f"To get started, simply enter the name of the movie you're interested in and we'll take care of the rest. 👇\n"
+                              f"Feel free to explore our vast collection and have a fantastic cinematic experience!\n"
+                              f"If you have any questions or need assistance, don't hesitate to reach out. Enjoy your time at AA Cinemas! 🎬")
 
-Welcome to AA Cinemas! 🔥
-
-Here, you can search and book your favorite movies for free and get ready to enjoy them with a bucket of popcorn 🍿.
-
-To get started, simply enter the name of the movie you're interested in and we'll take care of the rest. 👇
-
-Feel free to explore our vast collection and have a fantastic cinematic experience!
-
-If you have any questions or need assistance, don't hesitate to reach out. Enjoy your time at AA Cinemas! 🎬"""
+    update.message.reply_text("👇 Enter Movie Name 👇")
 
 
 def find_movie(update, context):
